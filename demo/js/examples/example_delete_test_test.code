@@ -1,0 +1,11 @@
+import Client from 'connectapi_core';
+import Demo from 'connectapi_demo';
+
+
+Client.set_url("https://example.com")
+Client.set_token("<TOKEN>")
+
+let service = Demo(client = new Client());
+
+let result = service.delete_test_test();
+console.log(result);
