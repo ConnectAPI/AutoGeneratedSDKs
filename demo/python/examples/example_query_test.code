@@ -1,0 +1,13 @@
+from connectapi_core import Client
+from connectapi_demo import Demo
+from connectapi_demo.schemas import *
+
+
+
+Client.set_url("https://example.com")
+Client.set_token("<TOKEN>")
+
+service = Demo(client=Client())
+
+result = service.query_test(a=42, b="lorem", c=True, d=0.6, )
+print(result)
